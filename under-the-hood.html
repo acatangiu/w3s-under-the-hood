@@ -93,11 +93,12 @@
         border:1px solid #3a2f6e;background:rgba(124,92,255,.07);padding:8px 13px;border-radius:2px;font-weight:400;white-space:nowrap}
   .chip.plain{color:var(--dim);border-color:var(--line);background:transparent}
 
-  /* no-servers drumbeat stamp */
-  .beat{position:absolute;top:0;right:0;display:flex;align-items:center;gap:9px;
+  /* no-servers / decentralized drumbeat stamp */
+  .beat{position:absolute;top:0;right:0;display:flex;align-items:center;gap:13px;
         border:1px solid #3a2f6e;color:var(--violet-bright);padding:9px 14px;border-radius:2px;
-        font-size:12px;letter-spacing:.18em;text-transform:uppercase;background:rgba(124,92,255,.06)}
+        font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;background:rgba(124,92,255,.06)}
   .beat svg{display:block}
+  .beat .bseg{display:inline-flex;align-items:center;gap:7px}
 
   /* points list */
   .points{list-style:none;display:flex;flex-direction:column;gap:15px}
@@ -181,13 +182,10 @@
     <div class="kbd">← → navigate · P presenter · F fullscreen</div>
 
     <!-- ============ SLIDE 1 — TITLE / HANDOFF ============ -->
-    <section class="slide" data-section="Handoff">
+    <section class="slide" data-section="">
       <div class="wrap">
         <div class="eyebrow" data-r="fade">Web3 Summit <span class="v">2026</span></div>
         <div class="stack mt-a" style="gap:0">
-          <div class="kicker" data-r style="margin-bottom:26px;max-width:52ch">
-            Torsten showed you the door — <span class="v">TrUAPI</span>.<br>Let me show you the rooms behind it.
-          </div>
           <h1 class="title mega" data-r>Under the<br>Hood</h1>
           <div class="subtitle" data-r style="margin-top:22px">The decentralized infrastructure behind TrUAPI</div>
         </div>
@@ -197,16 +195,13 @@
           <span class="chip">No trusted intermediaries</span>
           <span class="chip">One API</span>
         </div>
-        <div class="kicker" data-r style="margin-top:20px;color:var(--dim-2);font-size:14px">
-          Not how blockchains work — you know those. The <span class="vt">new</span> primitives this platform puts in your hands.
-        </div>
       </div>
     </section>
 
     <!-- ============ SLIDE 2 — LIGHT CLIENT ============ -->
     <section class="slide" data-section="Trust backbone">
       <div class="wrap">
-        <div class="beat" data-r="fade"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</div>
+        <div class="beat" data-r="fade"><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</span><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><rect x="1.3" y="1.3" width="10.4" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.7 6.8l2 2 3.6-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Decentralized</span></div>
         <div class="head-row">
           <div class="eyebrow" data-r="left"><span class="v">01</span> &nbsp;The trust backbone</div>
           <h2 class="title" data-r="left">The light client<br><span class="vt">is</span> the connection</h2>
@@ -217,7 +212,6 @@
             <ul class="points">
               <li data-r><span class="mk"></span><span><b>Smoldot</b> — a light client running inside the app — is the connection to Polkadot.</span></li>
               <li data-r><span class="mk"></span><span>No RPC provider to trust, rate-limit, or censor your users.</span></li>
-              <li data-r><span class="mk"></span><span>New: Smoldot now speaks <b>SSS</b> and <b>BC</b> natively.</span></li>
             </ul>
           </div>
           <div class="figbox" data-r="scale">
@@ -278,7 +272,7 @@
       <div class="wrap">
         <div class="head-row">
           <div class="eyebrow" data-r="left">Three superpowers</div>
-          <h2 class="title" data-r="left">What this platform<br>hands you</h2>
+          <h2 class="title" data-r="left">What the Polkadot<br>stack hands you</h2>
         </div>
         <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:38px">
           <div class="card" data-r>
@@ -309,14 +303,13 @@
     <!-- ============ SLIDE 4 — SSS PROMISE ============ -->
     <section class="slide" data-section="SSS · the promise">
       <div class="wrap">
-        <div class="beat" data-r="fade"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</div>
+        <div class="beat" data-r="fade"><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</span><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><rect x="1.3" y="1.3" width="10.4" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.7 6.8l2 2 3.6-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Decentralized</span></div>
         <div class="head-row">
           <div class="eyebrow" data-r="left"><span class="v">01 / 03</span> &nbsp;SSS</div>
           <h2 class="title" data-r="left">Private, serverless<br>messaging</h2>
         </div>
         <div class="col2" style="margin-top:6px">
           <div class="stack gap-l">
-            <p class="quote" data-r>Your <span class="v">TCP</span> for confidential, serverless app-to-app and user-to-user communication.</p>
             <div class="chips" data-r>
               <span class="chip">E2E encrypted</span>
               <span class="chip">No metadata leakage</span>
@@ -332,19 +325,35 @@
               <!-- endpoint B -->
               <rect x="344" y="130" width="96" height="72" rx="5" stroke="#7c5cff" stroke-width="1.6" fill="rgba(124,92,255,.06)"/>
               <text x="392" y="172" fill="#fff" font-size="14" text-anchor="middle" font-family="var(--mono)">B</text>
-              <!-- shrouded encrypted path -->
-              <rect class="pop" style="--rd:300ms" x="120" y="120" width="200" height="92" rx="6" stroke="#3a2f6e" stroke-width="1.3" stroke-dasharray="5 5" fill="rgba(124,92,255,.04)"/>
-              <text class="pop" style="--rd:420ms" x="220" y="160" fill="#ab97ff" font-size="12" text-anchor="middle" letter-spacing="1.5" font-family="var(--mono)">ENCRYPTED</text>
-              <text class="pop" style="--rd:420ms" x="220" y="180" fill="#6a6a73" font-size="10.5" text-anchor="middle" font-family="var(--mono)">no observable metadata</text>
+              <!-- relay swarm carries the message A -> B -->
+              <rect class="pop" style="--rd:300ms" x="120" y="120" width="200" height="100" rx="6" stroke="#3a2f6e" stroke-width="1.3" stroke-dasharray="5 5" fill="rgba(124,92,255,.04)"/>
+              <g stroke="#3a2f6e" stroke-width="1.2">
+                <line class="draw" style="--len:30;--rd:320ms" x1="120" y1="166" x2="138" y2="150"/>
+                <line class="draw" style="--len:46;--rd:380ms" x1="138" y1="150" x2="178" y2="134"/>
+                <line class="draw" style="--len:46;--rd:430ms" x1="178" y1="134" x2="218" y2="164"/>
+                <line class="draw" style="--len:46;--rd:480ms" x1="218" y1="164" x2="258" y2="136"/>
+                <line class="draw" style="--len:46;--rd:530ms" x1="258" y1="136" x2="300" y2="154"/>
+                <line class="draw" style="--len:30;--rd:580ms" x1="300" y1="154" x2="320" y2="166"/>
+                <line class="draw" style="--len:84;--rd:520ms" x1="138" y1="150" x2="218" y2="164"/>
+                <line class="draw" style="--len:84;--rd:560ms" x1="218" y1="164" x2="300" y2="154"/>
+              </g>
+              <g class="pop" style="--rd:640ms">
+                <circle cx="138" cy="150" r="5" fill="#000" stroke="#7c5cff" stroke-width="1.4"/>
+                <circle cx="178" cy="134" r="5" fill="#000" stroke="#7c5cff" stroke-width="1.4"/>
+                <circle cx="218" cy="164" r="5" fill="#000" stroke="#7c5cff" stroke-width="1.4"/>
+                <circle cx="258" cy="136" r="5" fill="#000" stroke="#7c5cff" stroke-width="1.4"/>
+                <circle cx="300" cy="154" r="5" fill="#000" stroke="#7c5cff" stroke-width="1.4"/>
+              </g>
+              <text class="pop" style="--rd:700ms" x="220" y="208" fill="#6a6a73" font-size="10.5" text-anchor="middle" font-family="var(--mono)">relayed by the swarm</text>
               <line class="draw" style="--len:30;--rd:200ms" x1="96" y1="166" x2="120" y2="166" stroke="#7c5cff" stroke-width="1.8"/>
               <line class="draw" style="--len:30;--rd:600ms" x1="320" y1="166" x2="344" y2="166" stroke="#7c5cff" stroke-width="1.8"/>
-              <!-- observer -->
-              <g class="pop" style="--rd:760ms">
-                <circle cx="220" cy="270" r="16" stroke="#4a4a52" stroke-width="1.4"/>
-                <circle cx="220" cy="266" r="5" stroke="#4a4a52" stroke-width="1.4"/>
-                <path d="M213 278a7 7 0 0 1 14 0" stroke="#4a4a52" stroke-width="1.4"/>
-                <line x1="220" y1="212" x2="220" y2="252" stroke="#4a4a52" stroke-width="1.2" stroke-dasharray="3 4"/>
-                <text x="220" y="306" fill="#5a5a63" font-size="10.5" text-anchor="middle" font-family="var(--mono)">observer sees nothing</text>
+              <!-- inferrer -->
+              <g class="pop" style="--rd:780ms">
+                <circle cx="220" cy="284" r="16" stroke="#4a4a52" stroke-width="1.4"/>
+                <circle cx="220" cy="280" r="5" stroke="#4a4a52" stroke-width="1.4"/>
+                <path d="M213 292a7 7 0 0 1 14 0" stroke="#4a4a52" stroke-width="1.4"/>
+                <line x1="220" y1="220" x2="220" y2="266" stroke="#4a4a52" stroke-width="1.2" stroke-dasharray="3 4"/>
+                <text x="220" y="320" fill="#5a5a63" font-size="10.5" text-anchor="middle" font-family="var(--mono)">nothing inferable</text>
               </g>
             </svg>
           </div>
@@ -367,7 +376,6 @@
               <li data-r><span class="mk"></span><span>No strong delivery guarantee — but <b>eventual delivery</b>.</span></li>
             </ul>
             <p class="quote" data-r>You publish to a topic, interested parties subscribe. <span class="v">That's it.</span></p>
-            <p class="lead" data-r style="font-size:15px">Chat is the obvious example — but the primitive powers <span class="em">any</span> private interaction.</p>
           </div>
           <div class="figbox" data-r="scale">
             <svg viewBox="0 0 420 340" fill="none">
@@ -410,7 +418,7 @@
     <!-- ============ SLIDE 6 — SSS KILLER BUILD ============ -->
     <section class="slide" data-section="SSS · what you can build">
       <div class="wrap">
-        <div class="beat" data-r="fade"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</div>
+        <div class="beat" data-r="fade"><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</span><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><rect x="1.3" y="1.3" width="10.4" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.7 6.8l2 2 3.6-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Decentralized</span></div>
         <div class="head-row">
           <div class="eyebrow" data-r="left">SSS · what you can build</div>
           <h2 class="title" data-r="left">P2P calls — <span class="vt">no</span><br>signaling server</h2>
@@ -476,7 +484,7 @@
             <ul class="points">
               <li data-r><span class="mk"></span><span>Prove you're a <b>unique human in a ring</b> — without revealing which one (RingVRF).</span></li>
               <li data-r><span class="mk"></span><span><b>Per-domain aliases</b>: cross-app SSO with no cross-app tracking.</span></li>
-              <li data-r><span class="mk"></span><span>Personhood is what <b>gates write access</b> to SSS.</span></li>
+              <li data-r><span class="mk"></span><span>Personhood is what <b>gates access</b> to SSS and BC.</span></li>
             </ul>
           </div>
           <div class="figbox" data-r="scale">
@@ -541,7 +549,7 @@
     <!-- ============ SLIDE 9 — BC PROMISE ============ -->
     <section class="slide" data-section="Bulletin Chain">
       <div class="wrap">
-        <div class="beat" data-r="fade"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No gateways</div>
+        <div class="beat" data-r="fade"><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</span><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><rect x="1.3" y="1.3" width="10.4" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.7 6.8l2 2 3.6-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Decentralized</span></div>
         <div class="head-row">
           <div class="eyebrow" data-r="left"><span class="v">03 / 03</span> &nbsp;Bulletin Chain</div>
           <h2 class="title" data-r="left">Censorship-resistant<br>storage</h2>
@@ -554,7 +562,6 @@
               <span class="chip">No gateways</span>
               <span class="chip">Ephemeral, with renewal</span>
             </div>
-            <p class="lead" data-r style="font-size:15px">Intentional, managed storage — <span class="em">not</span> "store everything forever." Honest, and a differentiator vs. permanent-storage chains.</p>
           </div>
           <div class="figbox" data-r="scale">
             <svg viewBox="0 0 400 340" fill="none">
@@ -598,14 +605,10 @@
           <div class="eyebrow" data-r="left">BC · what's already built</div>
           <h2 class="title" data-r="left" style="font-size:48px">Reference implementations</h2>
         </div>
-        <div class="cards" style="grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;margin-top:26px;gap:14px">
+        <div class="cards" style="grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;margin-top:24px;gap:14px">
           <div class="card" data-r style="padding:18px">
             <div class="tag">Hosting</div><h3 style="font-size:17px">Static apps</h3>
             <p>Whole web-apps on <span class="vt">.dot</span> domains via dot.li.</p>
-          </div>
-          <div class="card" data-r style="padding:18px">
-            <div class="tag">Identity</div><h3 style="font-size:17px">Proof-of-Ink</h3>
-            <p>Evidence media from People Chain via XCM.</p>
           </div>
           <div class="card" data-r style="padding:18px">
             <div class="tag">Transfer</div><h3 style="font-size:17px">Encrypted files</h3>
@@ -615,23 +618,23 @@
             <div class="tag">Metadata</div><h3 style="font-size:17px">App assets</h3>
             <p>Event data, contract ABIs, collectible art.</p>
           </div>
-          <div class="card" data-r style="padding:18px">
-            <div class="tag">Gated</div><h3 style="font-size:17px">Contract-gated</h3>
-            <p>EVM on Asset Hub authorizing users via XCM.</p>
-          </div>
           <div class="card" data-r style="padding:18px;border-color:#3a2f6e;background:rgba(124,92,255,.05)">
             <div class="tag">Governance</div><h3 style="font-size:17px">On-chain records</h3>
             <p>Immutable proposals — <span class="vt">replacing Polkassembly / Docs</span>.</p>
           </div>
         </div>
-        <p class="lead" data-r style="margin-top:22px;font-size:14px;max-width:none">These ship in the <span class="em">W3S open-source stack</span> — reference implementations, not slideware.</p>
+        <div data-r style="margin-top:16px;border:1px dashed #3a3a44;border-radius:6px;padding:15px 20px;display:flex;align-items:baseline;gap:20px">
+          <div class="tag" style="margin:0;flex:0 0 auto;color:var(--dim)">How, not what</div>
+          <div style="font-size:14px;line-height:1.5;color:var(--dim);font-weight:300"><b style="color:var(--ink);text-transform:uppercase;letter-spacing:.02em">Contract-gated access</b> — EVM contracts on Asset Hub authorize who can read or write, via XCM. A way to <span class="em">use</span> BC, not a use-case of it.</div>
+        </div>
+        <p class="lead" data-r style="margin-top:16px;font-size:14px;max-width:none">These ship in the <span class="em">W3S open-source stack</span> — reference implementations, not slideware.</p>
       </div>
     </section>
 
     <!-- ============ SLIDE 11 — PUT IT TOGETHER ============ -->
     <section class="slide" data-section="All together">
       <div class="wrap">
-        <div class="beat" data-r="fade"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>Zero servers</div>
+        <div class="beat" data-r="fade"><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><circle cx="6.5" cy="6.5" r="5.4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3 3l7 7" stroke="currentColor" stroke-width="1.3"/></svg>No servers</span><span class="bseg"><svg width="13" height="13" viewBox="0 0 13 13"><rect x="1.3" y="1.3" width="10.4" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M3.7 6.8l2 2 3.6-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Decentralized</span></div>
         <div class="head-row">
           <div class="eyebrow" data-r="left">All together</div>
           <h2 class="title" data-r="left">One dApp.<br>Zero servers.</h2>
@@ -639,44 +642,47 @@
         <div class="col2 wide-l" style="margin-top:0">
           <div class="figbox" data-r="fade">
             <svg viewBox="0 0 480 380" fill="none">
-              <!-- center dApp -->
-              <rect x="170" y="158" width="140" height="64" rx="6" stroke="#fff" stroke-width="1.8"/>
-              <text x="240" y="186" fill="#fff" font-size="13" text-anchor="middle" font-family="var(--mono)">Marketplace</text>
-              <text x="240" y="204" fill="#6a6a73" font-size="10.5" text-anchor="middle" font-family="var(--mono)">dApp</text>
-              <!-- three primitives -->
+              <!-- three primitives (top) -->
               <g font-family="var(--mono)" text-anchor="middle">
-                <g class="pop" style="--rd:300ms">
+                <g class="pop" style="--rd:760ms">
                   <rect x="20" y="40" width="118" height="48" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
                   <text x="79" y="61" fill="#ab97ff" font-size="11.5">PoP</text>
                   <text x="79" y="77" fill="#8c8c95" font-size="9.5">verified sellers</text>
                 </g>
-                <g class="pop" style="--rd:380ms">
-                  <rect x="342" y="40" width="118" height="48" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
-                  <text x="401" y="61" fill="#ab97ff" font-size="11.5">SSS</text>
-                  <text x="401" y="77" fill="#8c8c95" font-size="9.5">buyer ↔ seller chat</text>
-                </g>
-                <g class="pop" style="--rd:460ms">
+                <g class="pop" style="--rd:820ms">
                   <rect x="181" y="40" width="118" height="48" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
                   <text x="240" y="61" fill="#ab97ff" font-size="11.5">BC</text>
                   <text x="240" y="77" fill="#8c8c95" font-size="9.5">listing media</text>
                 </g>
+                <g class="pop" style="--rd:880ms">
+                  <rect x="342" y="40" width="118" height="48" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
+                  <text x="401" y="61" fill="#ab97ff" font-size="11.5">SSS</text>
+                  <text x="401" y="77" fill="#8c8c95" font-size="9.5">buyer ↔ seller chat</text>
+                </g>
               </g>
+              <!-- Smoldot fans out to the three (x3) -->
               <g stroke="#3a2f6e" stroke-width="1.3">
-                <line class="draw" style="--len:160;--rd:520ms" x1="100" y1="88" x2="195" y2="158"/>
-                <line class="draw" style="--len:120;--rd:560ms" x1="240" y1="88" x2="240" y2="158"/>
-                <line class="draw" style="--len:160;--rd:600ms" x1="380" y1="88" x2="285" y2="158"/>
+                <line class="draw" style="--len:131;--rd:600ms" x1="195" y1="150" x2="79" y2="88"/>
+                <line class="draw" style="--len:62;--rd:650ms" x1="240" y1="150" x2="240" y2="88"/>
+                <line class="draw" style="--len:131;--rd:700ms" x1="285" y1="150" x2="401" y2="88"/>
               </g>
-              <!-- light client + API -->
-              <g class="pop" style="--rd:720ms">
-                <rect x="150" y="262" width="180" height="42" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
-                <text x="240" y="288" fill="#ab97ff" font-size="11.5" text-anchor="middle" font-family="var(--mono)">Smoldot · light client</text>
+              <g class="pop" style="--rd:520ms">
+                <rect x="150" y="150" width="180" height="42" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
+                <text x="240" y="176" fill="#ab97ff" font-size="11.5" text-anchor="middle" font-family="var(--mono)">Smoldot · light client</text>
               </g>
-              <line class="draw" style="--len:50;--rd:680ms" x1="240" y1="222" x2="240" y2="262" stroke="#3a2f6e" stroke-width="1.3"/>
-              <g class="pop" style="--rd:820ms">
-                <rect x="150" y="322" width="180" height="40" rx="5" stroke="#23232c" stroke-width="1.4"/>
-                <text x="240" y="347" fill="#8c8c95" font-size="11.5" text-anchor="middle" font-family="var(--mono)">one API · TrUAPI</text>
+              <!-- TrUAPI -->
+              <line class="draw" style="--len:36;--rd:440ms" x1="240" y1="228" x2="240" y2="192" stroke="#3a2f6e" stroke-width="1.3"/>
+              <g class="pop" style="--rd:360ms">
+                <rect x="150" y="228" width="180" height="42" rx="5" stroke="#3a3a44" stroke-width="1.5"/>
+                <text x="240" y="254" fill="#c9c9d0" font-size="11.5" text-anchor="middle" font-family="var(--mono)">one API · TrUAPI</text>
               </g>
-              <line x1="240" y1="304" x2="240" y2="322" stroke="#23232c" stroke-width="1.3"/>
+              <!-- Marketplace dApp (bottom) -->
+              <line class="draw" style="--len:36;--rd:280ms" x1="240" y1="306" x2="240" y2="270" stroke="#3a2f6e" stroke-width="1.3"/>
+              <g class="pop" style="--rd:200ms">
+                <rect x="170" y="306" width="140" height="56" rx="6" stroke="#fff" stroke-width="1.8"/>
+                <text x="240" y="332" fill="#fff" font-size="13" text-anchor="middle" font-family="var(--mono)">Marketplace</text>
+                <text x="240" y="349" fill="#6a6a73" font-size="10.5" text-anchor="middle" font-family="var(--mono)">dApp</text>
+              </g>
             </svg>
           </div>
           <div class="stack gap-l">
@@ -698,16 +704,16 @@
         <div class="eyebrow" data-r="fade">Web3 Summit <span class="v">2026</span></div>
         <div class="stack mt-a" style="gap:0">
           <h2 class="title mega" data-r style="font-size:120px">Go build.</h2>
-          <div class="subtitle" data-r style="margin-top:22px">It's under the hood. It's open source.</div>
+          <div class="subtitle" data-r style="margin-top:22px">It's open source.</div>
         </div>
         <div class="mt-a" style="margin-top:40px">
           <p class="quote" data-r style="max-width:60ch;font-size:21px;color:var(--ink)">
             Web2 ease, web3 guarantees: call <span class="vt">one API</span>, run <span class="vt">no servers</span> — and your users get privacy, censorship-resistance, and verified humanity for free.
           </p>
           <div class="chips" data-r style="margin-top:30px">
-            <span class="chip" style="border-color:var(--pink);color:#ff5fb0;background:rgba(230,0,122,.07)">github.com/w3s · repos</span>
+            <span class="chip" style="border-color:var(--pink);color:#ff5fb0;background:rgba(230,0,122,.07)">github.com/paritytech · repos</span>
             <span class="chip plain">docs</span>
-            <span class="chip plain">reference apps</span>
+            <span class="chip plain">prototypes</span>
           </div>
         </div>
       </div>
@@ -751,6 +757,7 @@
     {t:"SSS — the promise", m:2, n:[
       "Lead with capability, not architecture",
       "\u201cTCP for confidential, serverless comms\u201d",
+      "SSS does not encrypt itself — layers above (also in TrUAPI) do",
       "E2E encrypted · no metadata leak · (src,dest) hidden · no trusted servers"]},
     {t:"SSS — mental model", m:1.5, n:[
       "Keep it LIGHT — one visual, move on",
@@ -769,7 +776,7 @@
       "One person, one account — crypto-enforced, no biometrics",
       "RingVRF: prove unique human in the ring, without revealing which",
       "Per-domain aliases: SSO with no cross-app tracking",
-      "Couples to SSS: personhood gates write access",
+      "Couples to SSS + BC: personhood gates access to both",
       "FLEX — compress if running behind"]},
     {t:"PoP — what you can build   (FLEX)", m:1.5, n:[
       "Verified-human-only: no bot spam · real sellers · genuine engagement",
@@ -778,19 +785,21 @@
     {t:"Bulletin Chain — the promise", m:1.5, n:[
       "Decentralized storage for Polkadot",
       "Content-addressed CIDs · IPFS Bitswap · no gateways",
-      "Ephemeral by default + renewal — honest differentiator vs permanent-storage chains"]},
+      "Ephemeral by default, with renewal",
+      "Intentional, managed storage — not \u201cstore everything forever\u201d"]},
     {t:"BC — reference implementations", m:2.5, n:[
       "CREDIBILITY: these are REAL, in the W3S open-source stack — say it out loud",
       "Pick 2-3 to dwell on, name the rest fast",
-      "Static apps on .dot (dot.li) · Proof-of-Ink · encrypted files · metadata · contract-gated",
-      "Governance records = replaces Polkassembly / Google Docs (strong beat)"]},
+      "Static apps on .dot (dot.li) · encrypted files · app metadata / ABIs",
+      "Governance records = replaces Polkassembly / Google Docs (strong beat)",
+      "Contract-gated = HOW to use BC (EVM on Asset Hub via XCM), not a use-case — kept separate"]},
     {t:"Putting it together", m:1.5, n:[
       "Marketplace: all three primitives, zero servers",
       "Verified sellers (PoP) · private chat (SSS) · listing media (BC)",
       "Trustless via Smoldot · one API (TrUAPI)",
       "Land: \u201cNo backend. No infra team. No server bill. More private than the centralized version.\u201d"]},
     {t:"Go build", m:1, n:[
-      "It\u2019s under the hood — and open source",
+      "It\u2019s open source",
       "One clear CTA: repos + docs",
       "Restate the through-line: web2 ease, web3 guarantees",
       "\u26a0 swap the placeholder URLs before presenting"]}
