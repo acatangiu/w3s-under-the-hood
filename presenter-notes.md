@@ -79,4 +79,61 @@ S6 (1:30):
 S7:
 - another critical thing apps need is storage
 - the 2nd superpower - is censorship-res. and dec. storage
-- 
+- data you store here - content addressed
+- accessible natively through the light client using IPFS Bitswap
+- No gateways. Decentralized.
+- One important caveat:
+- stored data is ephemeral
+- function of capacity over time
+- 2 weeks lifetime by default
+- can be manually renewed
+
+S8:
+- this is not slideware
+- Levity is used by real dApps you'll see and interact with in W3S
+- host entire web-apps on .dot domains
+- used for file & media transfers in chat apps
+- used for app assets like Event data, or collectible art
+- and it is fully integrated with the SCs platform to manage it all
+- these are real usecases you can explore implementations for in the W3S open stack
+
+S9:
+- the last main superpower is called Humanity
+- prev known as PoP
+- provides: one person, one account
+- social games prove you are a unique human, without relying on gov IDs or invasive biometrics
+- once you prove humanity through social game(s)
+- get added to a RingVRF, that can ZK proof membership without disclosing identity
+- derive per-domain aliases
+- effectively get cross-app SSO with no cross-app tracking
+- give examples
+
+
+S10:
+- gives dApps superpowers like:
+- social media without bots
+- genuine communities of people
+- best part:
+- get sybil resistance without relinquishing privacy
+
+S11:
+- bring it all together
+- one of many possible examples:
+- Marketplace dApp
+- sellers & buyers verified humans
+- reviews and ratings verified humans
+- s & b get private chat
+- listings hosted in censorship-res. storage
+- SCs provide trustless escrow
+- All reached through one API
+- All verifiably and trustlessly accessible through light client
+- these properties cryptographically guaranteed by the infrastructure
+
+S12:
+- so I leave you with this
+- GO BUILD
+- IT'S OPEN SOURCE
+- the web3 stack has arrived
+- gives web2 ease with web3 guarantees
+- now it's up to you to bring forth the new private and human-centric internet
+- have fun!

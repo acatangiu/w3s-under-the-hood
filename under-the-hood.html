@@ -187,7 +187,7 @@
         <div class="eyebrow" data-r="fade">Web3 Summit <span class="v">2026</span></div>
         <div class="stack mt-a" style="gap:0">
           <h1 class="title mega" data-r>Under the<br>Hood</h1>
-          <div class="subtitle" data-r style="margin-top:22px">The decentralized infrastructure behind TrUAPI</div>
+          <div class="subtitle" data-r style="margin-top:22px">The decentralized infrastructure behind Trinity</div>
         </div>
         <div class="chips mt-a" data-r style="margin-top:34px">
           <span class="chip">Decentralized primitives</span>
@@ -226,7 +226,7 @@
           </div>
         </div>
         <p class="lead tight" data-r style="margin-top:34px;max-width:none">
-          All exposed through <span class="em">one API</span> (TrUAPI). All trustless and verifiable via the <span class="vt">light client</span>.
+          All exposed through <span class="em">one API</span> (Trinity). All trustless and verifiable via the <span class="vt">light client</span>.
         </p>
       </div>
     </section>
@@ -672,11 +672,11 @@
                 <rect x="150" y="150" width="180" height="42" rx="5" stroke="#7c5cff" stroke-width="1.5" fill="rgba(124,92,255,.06)"/>
                 <text x="240" y="176" fill="#ab97ff" font-size="11.5" text-anchor="middle" font-family="var(--mono)">Smoldot · light client</text>
               </g>
-              <!-- TrUAPI -->
+              <!-- Trinity -->
               <line class="draw" style="--len:36;--rd:440ms" x1="240" y1="228" x2="240" y2="192" stroke="#3a2f6e" stroke-width="1.3"/>
               <g class="pop" style="--rd:360ms">
                 <rect x="150" y="228" width="180" height="42" rx="5" stroke="#3a3a44" stroke-width="1.5"/>
-                <text x="240" y="254" fill="#c9c9d0" font-size="11.5" text-anchor="middle" font-family="var(--mono)">one API · TrUAPI</text>
+                <text x="240" y="254" fill="#c9c9d0" font-size="11.5" text-anchor="middle" font-family="var(--mono)">one API · Trinity</text>
               </g>
               <!-- Marketplace dApp (bottom) -->
               <line class="draw" style="--len:36;--rd:280ms" x1="240" y1="306" x2="240" y2="270" stroke="#3a2f6e" stroke-width="1.3"/>
@@ -742,66 +742,114 @@
   // ---- speaker notes (tight cues) — single source of truth, travels with the file ----
   var META = [
     {t:"Handoff / framing", m:1.5, n:[
-      "Torsten showed the door (TrUAPI) — I show the rooms behind it",
-      "NOT explaining blockchains / contracts — the NEW primitives",
-      "Promise: decentralized primitives · no servers · no trusted middlemen · one API",
-      "Energy high, move briskly"]},
+      "Hi, I'm Adrian",
+      "Now that Torsten showed the host container and unified API,",
+      "I'll show you some of the infrastructure behind it",
+      "Not gonna explain blockchains and SCs — you already know those",
+      "Focus on new, powerful decentralized infrastructure pieces",
+      "Ones that let you build human-centered Web3 dApps with no central servers and no trusted intermediaries",
+      "All available through the Trinity API"]},
     {t:"Three superpowers (agenda)", m:0.5, n:[
-      "FAST — signpost only, don\u2019t linger",
-      "Name them: Celerity · Levity · Humanity",
-      "All via one API, all trustless via the light client"]},
-    {t:"Light client = the connection", m:2.5, n:[
-      "Platform never phones home — Smoldot IS the connection",
-      "Light client runs inside the app / browser",
-      "NEW: Smoldot speaks Celerity + Levity natively",
-      "Why care: no RPC provider to trust, rate-limit, or censor",
-      "Line: \u201cMost web3 apps trust one server. Ours don\u2019t.\u201d"]},
+      "Busy building a full developer platform on top of the Polkadot stack",
+      "You'll enjoy building on this platform",
+      "Made up of too many pieces — focus on 3 superpowers",
+      "Celerity — private interactions",
+      "Levity — censorship-res. storage",
+      "Humanity — verified humans",
+      "All exposed through one API",
+      "All trustless and verifiable via the light client"]},
+    {t:"Light client = the connection", m:1, n:[
+      "I mention the LC, because:",
+      "Most web3 apps still trust one server to tell them the truth",
+      "Ours don't",
+      "Smoldot is a light client running inside the host container",
+      "dApp gets it out of the box",
+      "No RPC provider to trust — can rate-limit or censor users",
+      "The light client IS the connection",
+      "Built-in native support for the superpowers I'm about to showcase"]},
     {t:"Celerity — the promise", m:2, n:[
-      "Lead with capability, not architecture",
-      "\u201cTCP for confidential, serverless comms\u201d",
-      "Celerity does not encrypt itself — layers above (also in TrUAPI) do",
-      "E2E encrypted · no metadata leak · (src,dest) hidden · no trusted servers"]},
-    {t:"Celerity — mental model", m:1.5, n:[
-      "Keep it LIGHT — one visual, move on",
-      "Topics = keys, statements = values; subscribe by topic",
-      "Eventual delivery (not a strong guarantee)",
-      "\u201cPublish to a topic, interested parties subscribe. That\u2019s it.\u201d",
-      "Do NOT go into Kademlia / DHT internals",
-      "Chat is the obvious example — but powers ANY private interaction"]},
-    {t:"Celerity — what you can build  \u2605", m:2, n:[
-      "Start with chat (the obvious one)",
-      "Pivot: \u201cbut what about audio / video calls?\u201d",
-      "KILLER: WebRTC P2P, NO signaling server — Celerity carries the SDP exchange",
-      "Land it: \u201cEach normally needs a server you run + users trust. Here, neither exists.\u201d",
-      "Energy peak — slow down, let it land"]},
+      "1st superpower — Celerity — private, serverless messaging",
+      "It's your dApp's TCP for confidential, serverless comms",
+      "What we want:",
+      "1. Relies on no trusted servers — powered by the decentralized Celerity swarm",
+      "2. No metadata leakage — external observers can make minimal inference about what or who",
+      "3. (src, dest) pair confidential",
+      "4. Messages e2e encrypted — only src and dst hold the decryption key"]},
+    {t:"Celerity — mental model", m:3, n:[
+      "The way: a relatively simple store-and-forward pub/sub architecture",
+      "Topics are keys · statements are values",
+      "I likened it to TCP earlier — not exactly",
+      "No strong delivery guarantee — but eventual delivery. Good enough.",
+      "You publish to a topic, interested parties subscribe. That's it.",
+      "▸ now go BACK to the previous slide and explain on its diagram",
+      "Let's see how our requirements are satisfied:",
+      "A & B run Diffie-Hellman key exchange — shared secret — secret session topic",
+      "A publishes encrypted messages to this seemingly random topic",
+      "Swarm gossips all messages, including A's",
+      "(each peer gossips a pseudo-random subset of all topics)",
+      "B is in that swarm and acts like any other peer",
+      "Any outside observer cannot infer (A, B) as (src, dst)",
+      "Obvious dApp feature: e2e encrypted chat where nobody can infer who talks to whom, how much, or how often",
+      "Fully resilient — no centralized server to hack or backdoor",
+      "Pretty cool!"]},
+    {t:"Celerity — what you can build  ★", m:1.5, n:[
+      "We've seen private chat — what about audio or video calls?",
+      "You can do that too — decentralized & completely private",
+      "Celerity as control-plane, WebRTC as data-plane",
+      "Celerity carries the WebRTC SDP offer / answer exchange",
+      "Call happens p2p, e2e encrypted over direct WebRTC",
+      "Same model also works for: presence · confidential coordination · private notifications",
+      "any general signaling to negotiate another protocol",
+      "These normally need a server you run + trust — here neither is required!"]},
     {t:"Levity — the promise", m:1.5, n:[
-      "Decentralized storage for Polkadot",
-      "Content-addressed CIDs · IPFS Bitswap · no gateways",
-      "Ephemeral by default, with renewal",
-      "Intentional, managed storage — not \u201cstore everything forever\u201d"]},
+      "Another critical thing apps need is storage",
+      "2nd superpower — censorship-resistant & decentralized storage",
+      "Data you store here is content-addressed",
+      "Accessible natively through the light client using IPFS Bitswap",
+      "No gateways. Decentralized.",
+      "One important caveat: stored data is ephemeral",
+      "Function of capacity over time",
+      "2-week lifetime by default — can be manually renewed"]},
     {t:"Levity — reference implementations", m:2.5, n:[
-      "CREDIBILITY: these are REAL, in the W3S open-source stack — say it out loud",
-      "Pick 2-3 to dwell on, name the rest fast",
-      "Static apps on .dot (dot.li) · encrypted files · app metadata / ABIs",
-      "Governance records = replaces Polkassembly / Google Docs (strong beat)",
-      "Contract-gated = HOW to use Levity (EVM on Asset Hub via XCM), not a use-case — kept separate"]},
+      "This is not slideware",
+      "Levity is used by real dApps you'll see and interact with at W3S",
+      "Host entire web-apps on .dot domains",
+      "Used for file & media transfers in chat apps",
+      "Used for app assets like event data or collectible art",
+      "Fully integrated with the smart-contract platform to manage it all",
+      "Real use-cases you can explore implementations for in the W3S open stack"]},
     {t:"Humanity — the promise", m:1.5, n:[
-      "One person, one account — crypto-enforced, no biometrics",
-      "RingVRF: prove unique human in the ring, without revealing which",
-      "Per-domain aliases: SSO with no cross-app tracking",
-      "Couples to Celerity + Levity: humanity gates access to both"]},
+      "The last main superpower is Humanity",
+      "Previously known as PoP",
+      "Provides: one person, one account",
+      "Social games prove you're a unique human — no gov IDs, no invasive biometrics",
+      "Once you prove humanity through social game(s),",
+      "you're added to a RingVRF — ZK-prove membership without disclosing identity",
+      "Derive per-domain aliases",
+      "Effectively cross-app SSO with no cross-app tracking",
+      "Give examples"]},
     {t:"Humanity — what you can build", m:1.5, n:[
-      "Verified-human-only: no bot spam · real sellers · genuine engagement",
-      "Land: \u201cSybil resistance + privacy usually pull opposite. Here, both.\u201d"]},
+      "Gives dApps superpowers like:",
+      "social media without bots",
+      "genuine communities of people",
+      "Best part: Sybil resistance without relinquishing privacy"]},
     {t:"Putting it together", m:1.5, n:[
-      "Marketplace: all three primitives, zero servers",
-      "Verified sellers (Humanity) · private chat (Celerity) · listing media (Levity)",
-      "Trustless via Smoldot · one API (TrUAPI)",
-      "Land: \u201cNo backend. No infra team. No server bill. More private than the centralized version.\u201d"]},
+      "Bring it all together — one of many possible examples:",
+      "Marketplace dApp",
+      "Sellers & buyers are verified humans",
+      "Reviews and ratings by verified humans",
+      "Seller & buyer get private chat",
+      "Listings hosted in censorship-resistant storage",
+      "Smart contracts provide trustless escrow",
+      "All reached through one API",
+      "All verifiably and trustlessly accessible through the light client",
+      "These properties cryptographically guaranteed by the infrastructure"]},
     {t:"Go build", m:1, n:[
-      "It\u2019s open source",
-      "One clear CTA: repos + docs",
-      "Restate the through-line: web2 ease, web3 guarantees"]}
+      "So I leave you with this: GO BUILD",
+      "It's open source",
+      "The web3 stack has arrived — web2 ease with web3 guarantees",
+      "Now it's up to you to bring forth the new private, human-centric internet",
+      "Have fun!"]}
   ];
 
   function pad(n){return (n<10?'0':'')+n;}
